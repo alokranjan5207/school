@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+{% load static %} {% load bootstrap5 %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div>
+      <ul
+        class="nav justify-content-end bg-danger w-100 p-3 text-white bg-dark"
+      >
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="{% url 'app1:about' %}"
+            width="100px"
+            height="100%"
+            >HOME</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'app1:about' %}">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">ADMISSION</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">EVENTS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">LOGIN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">CONTACT US</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- page-1 -->
+
+    <div class="container">
+      <div class="left">
+        <img src="{% static 'images/sports.png' %}" alt="" />
+      </div>
+      <div class="right">
+        <h1 id="sf">Sports Facility</h1>
+        <br />
+        <hr id="hr" />
+        <p>
+          We are proud to offer a state-of-the-art sports facility at our
+          school, providing our students with opportunities to engage in
+          physical activity and develop their athletic abilities.Our sports
+          facility includes a range of equipment and amenities, including
+          outdoor fields for team sports such as soccer, football, and baseball.
+          We also have basketball and tennis courts for individual or team play,
+          as well as a track for running and other athletic activities.Inside
+          our facility, we have a spacious gymnasium for indoor sports and
+          activities like basketball, volleyball, and gymnastics. Our gym also
+          includes a weight room and fitness equipment for students to use
+          during their workouts.In addition to our extensive sports equipment,
+          we also have dedicated coaches and trainers who work with our students
+          to help them achieve their athletic goals. Our coaches are passionate
+          about sports and work hard to ensure that each student has the
+          opportunity to develop their skills and abilities to their full
+          potential.
+        </p>
+      </div>
+    </div>
+    <!-- page-2 -->
+    <div class="container">
+      <div class="left">
+        <img src="{% static 'images/library.png' %}" alt="" />
+      </div>
+      <div class="right">
+        <h1 id="sf">Sports Facility</h1>
+        <br />
+        <hr id="hr" />
+        <p>
+          At our school, the library is a hub of learning, exploration, and
+          discovery. We are proud to offer a state-of-the-art library facility
+          that is designed to meet the needs of all our students. Our library
+          features a wide range of books, magazines, and other printed
+          materials, as well as access to a variety of online resources and
+          databases. Our librarians are dedicated professionals who are always
+          available to help students find the resources they need and answer any
+          questions they may have.In addition to providing resources for
+          learning and research, the library also offers a comfortable and quiet
+          space for students to study, work on projects, or simply relax and
+          read. With comfortable seating, ample natural light, and a calm
+          atmosphere, the library is the perfect place to escape the noise and
+          distractions of the outside world and focus on academic and personal
+          pursuits. At our school, we believe that the library is an essential
+          component of the education experience. It provides students with the
+          tools and resources they need to succeed academically, while also
+          fostering a love of learning and curiosity that extends beyond the
+          classroom. We are proud to offer a top-notch library facility that
+          supports the educational and personal growth of our students and
+          promotes a lifelong love of reading and learning.
+        </p>
+      </div>
+    </div>
+    <!-- page-3 -->
+    <div class="container">
+      <div class="left">
+        <img src="{% static 'images/bus.png' %}" alt="" />
+      </div>
+      <div class="right">
+        <h1 id="sf">Library Facility</h1>
+        <br />
+        <hr id="hr" />
+        <p>
+          At our school, we understand the importance of safe and reliable
+          transportation for our students. That’s why we offer a comprehensive
+          transport facility that is designed to meet the needs of our families
+          and students.Our transport facility includes a fleet of
+          well-maintained buses that are equipped with modern safety features,
+          including seat belts, GPS tracking, and on-board cameras. Our drivers
+          are highly trained and experienced, and they take great care to ensure
+          that all students are transported safely to and from school.We offer
+          transportation services to students who live within a designated area
+          surrounding our school. Our routes are designed to be convenient for
+          our families, with multiple stops throughout the surrounding
+          neighbourhood.In addition to providing safe and reliable
+          transportation, we also believe in promoting positive behaviour and
+          responsibility among our students.
+        </p>
+      </div>
+    </div>
+    <!-- page-4 -->
+    <div class="container">
+      <div class="left">
+        <img src="{% static 'images/computerlab.png' %}" alt="" />
+      </div>
+      <div class="right">
+        <h1 id="sf">Computer Lab</h1>
+        <br />
+        <hr id="hr" />
+        <p>
+          At our school, we are proud to offer a state-of-the-art computer lab
+          facility that is designed to support student learning and engagement
+          in technology. Our computer lab is equipped with advanced hardware and
+          software that allow students to explore a wide range of digital tools
+          and applications. Our computer lab provides students with access to
+          the latest technology and resources that help to enhance their
+          academic experience. With internet access and a variety of educational
+          software programs, our students can learn, explore and experiment with
+          the latest technologies. Our computer lab is also staffed by
+          experienced technicians who are available to help students with any
+          technical issues or questions they may have. Whether students need
+          help navigating software or troubleshooting hardware issues, our
+          technicians are there to help. In addition to offering a wide range of
+          technology resources, our computer lab also provides a safe and secure
+          environment for students to learn and experiment with technology. With
+          a dedicated space and controlled access, students can use the lab
+          safely and responsibly.
+        </p>
+      </div>
+    </div>
+    <!-- page-5 -->
+    <div class="container">
+      <div class="left">
+        <img src="{% static 'images/smartclass.png' %}" alt="" />
+      </div>
+      <div class="right">
+        <h1 id="sf">Smart Class</h1>
+        <br />
+        <hr id="hr" />
+        <p>
+          Our school is proud to offer state-of-the-art smart class facilities
+          that enhance the learning experience for our students. With advanced
+          technology, interactive displays, and multimedia tools, our smart
+          classrooms offer a more engaging, dynamic, and personalized approach
+          to learning.Our smart class facilities are equipped with the latest
+          tools and resources, including projectors, interactive whiteboards,
+          and digital displays. This technology allows teachers to create
+          interactive and immersive learning experiences that capture the
+          attention and imagination of our students.The multimedia capabilities
+          of smart classrooms allow students to explore concepts and ideas in
+          new and exciting ways. They can watch videos, participate in virtual
+          simulations, and interact with digital content that brings lessons to
+          life. This type of learning can help students understand concepts more
+          deeply and retain information more effectively
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

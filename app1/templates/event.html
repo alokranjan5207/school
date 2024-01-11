@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load static %} 
+{% load bootstrap5 %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/event.css' %}">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script> 
+</head>
+<body>
+    <h2>hjjhdsfa</h2>
+    <!-- cart -->
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+            <div class="card">
+              <img src="{% static 'images/dance.jpg' %}" width="300px" height="600px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Dance</h5>
+                <p class="card-text">To hone the dancing skills of the students, an Inter House Solo Dance Competition was organized on 21st August 2021, in our school auditorium, with the theme ‘Feet on Fire’. The competition was held in two categories: Classical and Freestyle.</p>
+              </div>
+            </div>
+          </div>
+        <div class="col">
+            <div class="card">
+              <img src="{% static 'images/painting.jpeg' %}" width="300px" height="600px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Painting</h5>
+                <p class="card-text">Through a wide range of experiences, students learn about painting tools, basic color-mixing, composition, form, and spatial relationships. Students also engage with a variety of subjects ranging from still-life, interiors, abstraction, self portraits and the figure.</p>
+              </div>
+            </div>
+          </div>
+        
+        <div class="col">
+          <div class="card">
+            <img src="{% static 'images/Gandhi-Jayanti.jpg' %}" width="300px" height="600px" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Gandhi Jayanti</h5>
+              <p class="card-text">India’s 3rd national festival, Gandhi Jayanti is celebrated by the entire nation to commemorate the birth anniversary of the father of our nation- Mahatma Gandhi. The students promise to abide by the campaign- ‘Swachhta Hi Sewa Abhiyan’, with the pledge to keep the school, home and city clean. The event emphasizes on the importance of the famous message by Mahatma Gandhi-
+
+                Be the Change you wish to see in the world.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="card">
+            <img src="{% static 'images/Science-Exhibition.jpg'%}" width="300px" height="600px" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Project</h5>
+              <p class="card-text">There are no dreams too large, no innovation unimaginable and no frontiers beyond the reach of the students. To promote participatory and hands-on learning in Science, the school organizes Science Exhibition for all students. The activity aims at providing a common platform to students to give shape to their innovative ideas and learn from each other’s experiences. The exhibition also provides a medium for popularizing Science and increasing awareness about the close relationship between Science, Technology and Society.
+
+              </p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <hr>
+      <section>
+        <video id="video1" src="{%static 'images/drawingvideo.mp4' %}" height="700px" width="800px" controls autoplay></video>
+        <video id="video2" src="{%static 'images/yogavideo.mp4' %}" height="700px" width="800px" controls autoplay></video>
+
+      </section>
+</body>
+</html>
