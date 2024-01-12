@@ -20,7 +20,10 @@ def contact(request):
 def admission(request):
     return render(request=request,template_name='admission.html')
 
-def dp(request):
+def login(request):
+    return render(request=request,template_name='login.html')
+
+def formdata(request):
     if request.method=='POST':
         fm=AdmissionForm(request.POST)
         if fm.is_valid():

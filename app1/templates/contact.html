@@ -20,6 +20,36 @@
     ></script> 
 </head>
 <body>
+    <!-- nav -->
+
+    <ul class="nav justify-content-end bg-danger w-100 p-3 text-white bg-dark">
+      <li class="nav-item">
+        <a
+          class="nav-link active"
+          aria-current="page"
+          href="{% url 'app1:home' %}"
+          width="100px"
+          height="100%"
+          >HOME</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'app1:about' %}">ABOUT</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'app1:admission' %}">ADMISSION</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'app1:event' %}">EVENTS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'app1:login' %}">LOGIN</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'app1:contact' %}">CONTACT US</a>
+      </li>
+    </ul>
+
     <img class="photo" src="{% static 'images/classroom1.jpeg' %}" alt="">
     <!-- Footer -->
     <footer id="foot" class="text-center text-lg-start bg-body-tertiary text-muted">
