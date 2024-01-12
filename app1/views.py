@@ -27,7 +27,7 @@ def formdata(request):
     if request.method=='POST':
         fm=AdmissionForm(request.POST)
         if fm.is_valid():
-            nm=fm.changed_data['Student_Name']
+            nm=int(fm.changed_data['Student_Name'])
             mn=fm.cleaned_data['Mother_Name']
             adrn=fm.cleaned_data['Adhar_No']
             cnt=fm.cleaned_data['Contact_No']
