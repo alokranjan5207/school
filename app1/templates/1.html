@@ -21,10 +21,55 @@
 </head>
 <body>
     <h1>Added Data</h1>
-    <form class="col-sm-5 center-block" action="" method="POST">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" class="btn btn-success" value="submit">
+    <div>
+      <form class="col-sm-5 center-block" action="" method="POST">
+          {% csrf_token %}
+          {{form.as_p}}
+          <input type="submit" class="btn btn-success" value="submit">
       </form>
+    </div>
+
+  <!-- show data on page -->
+  <div class="col-sm-8">
+    <h4 class="text-center alert-info">Show Student Information</h4>
+    {% if stu %}
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Student's Name</th>
+          <th scope="col">Mother's Name</th>
+          <th scope="col">Class</th>
+          <th scope="col">Contact</th>
+          <th scope="col">Address</th>
+          <th scope="col">Adhar No.</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for st in stu %}
+        <tr>
+          <th scope="row">{{st.id}}</th>
+          <td>{{st.Student_Name}}</td>
+          <td>{{st.Mother_Name}}</td>
+          <td>{{st.Adhar_No}}</td>
+          <td>{{st.Contact_No}}</td>
+          <td>{{st.Contact_No}}</td>
+          <td>{{st.Address}}</td>
+          <td>
+            <a href="#" class="btn btn-warning btn-sm">Edit</a>
+            <form action="{% url 'deletedata' st.id %}" method="POST" class="d-inline">
+              {% csrf_token %}
+              <input type="submit" class="btn btn-danger" value="Delete">
+
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    {% endif %}
+
+  </div>
 </body>
 </html>

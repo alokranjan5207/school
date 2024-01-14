@@ -10,4 +10,5 @@ urlpatterns = [
     path('admission/',view=views.admission,name='admission'),
     path('login/',view=views.login,name='login'),
     path('formdata/',view=views.formdata,name='formdata'),
+    path('delete/<int:id>/',view=views.delete_data,name='deletedata'),
 ]

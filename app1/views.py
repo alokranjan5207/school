@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,HttpResponseRedirect
 from .models import Admission
 from .forms import AdmissionForm
 # Create your views here.
@@ -22,7 +22,7 @@ def admission(request):
 
 def login(request):
     return render(request=request,template_name='login.html')
-
+# add data using form
 def formdata(request):
     if request.method=='POST':
         fm=AdmissionForm(request.POST)
@@ -40,5 +40,13 @@ def formdata(request):
         fm=AdmissionForm()
     else:
         fm=AdmissionForm()
-        # stud=Admission.objects.all()    # show all formdata
-    return render(request=request,template_name='1.html',context={'form':fm})
+    stud=Admission.objects.all()    # show all formdata
+    return render(request=request,template_name='1.html',context={'form':fm,'stu':stud})
+
+    # delete data
+def delete_data(request,id):
+    if request.method=='POST':
+        pi=Admission.objects.get(pk=id)
+        pi.delete()
+        return HttpResponseRedirect('/') #delete from home
+
