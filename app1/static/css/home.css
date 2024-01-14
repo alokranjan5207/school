@@ -43,21 +43,7 @@
 
     justify-content: center; 
 } 
-.foot{
-    border: 8px solid red;
-    background-color: black;
-}
-#last{
-    background-color: red;
-}
+
 #mail-link{
     text-decoration: none;
-}
-.fas{
-    background-color: red;
-    /* font-size: 30px; */
-}
-.text-uppercase{
-    background-color: red;
-    font-size: 28px;
 }

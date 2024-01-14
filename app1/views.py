@@ -36,7 +36,9 @@ def formdata(request):
         #     adrs=fm.cleaned_data['Address']
         #     res=AdmissionForm(Student_Name=nm,Mother_Name=mn,Adhar_No=adrn,Contact_No=cnt,Address=adrs)
         #     res.save()
-        #    fm=AdmissionForm()
+            return render(request=request,template_name="sucessfuladmsn.html")
+        fm=AdmissionForm()
     else:
         fm=AdmissionForm()
+        # stud=Admission.objects.all()    # show all formdata
     return render(request=request,template_name='1.html',context={'form':fm})

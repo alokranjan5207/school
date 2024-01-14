@@ -14,7 +14,7 @@
 
   }
   
-.left,.right>img {
+.left,right>img {
     height: 600px;
     /* width: 400%; */
     margin-left: -150px;
@@ -35,7 +35,7 @@
     margin-left: 400px;
 }
 #hr{
-    border: 3px solid rgb(255, 0, 0);
+    /* border: 3px solid rgb(255, 0, 0); */
     display: inline-block;
     width: 300px;
     margin-left: 380px;
