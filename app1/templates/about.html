@@ -20,7 +20,9 @@
     ></script>
   </head>
   <body>
-      <!-- nav -->
+
+      {% include 'header.html' %}
+      {% comment %} <!-- nav -->
 
     <ul class="nav justify-content-end bg-danger w-100 p-3 text-white bg-dark">
       <li class="nav-item">
@@ -48,7 +50,7 @@
       <li class="nav-item">
         <a class="nav-link" href="{% url 'app1:contact' %}">CONTACT US</a>
       </li>
-    </ul>
+    </ul> {% endcomment %}
     
     <!-- page-1 -->
 
@@ -197,5 +199,6 @@
         </p>
       </div>
     </div>
+    {% include 'footer.html' %}
   </body>
 </html>

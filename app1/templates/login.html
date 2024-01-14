@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-{% load static %} 
-{% load bootstrap5 %}
+{% load static %} {% load bootstrap5 %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'css/login.css' %}" />
     <link
@@ -18,35 +17,11 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-</head>
-<body>
-    <!-- nav -->
+  </head>
+  <body>
+    {% include 'header.html' %}
 
-    <ul class="nav justify-content-end bg-danger w-100 p-3 text-white bg-dark">
-        <li class="nav-item">
-          <a
-            class="nav-link active"
-            aria-current="page"
-            href="{% url 'app1:home' %}"
-            width="100px" height="100%">HOME</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'app1:about' %}">ABOUT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'app1:admission' %}">ADMISSION</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'app1:event' %}">EVENTS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'app1:login' %}">LOGIN</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'app1:contact' %}">CONTACT US</a>
-        </li>
-      </ul>
-  
     <h1>Login Page</h1>
-</body>
+    {% include 'footer.html' %}
+  </body>
 </html>

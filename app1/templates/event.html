@@ -21,36 +21,7 @@
     ></script> 
 </head>
 <body>
-    <!-- nav -->
-
-    <ul class="nav justify-content-end bg-danger w-100 p-3 text-white bg-dark">
-      <li class="nav-item">
-        <a
-          class="nav-link active"
-          aria-current="page"
-          href="{% url 'app1:home' %}"
-          width="100px"
-          height="100%"
-          >HOME</a
-        >
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'app1:about' %}">ABOUT</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'app1:admission' %}">ADMISSION</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'app1:event' %}">EVENTS</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'app1:login' %}">LOGIN</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'app1:contact' %}">CONTACT US</a>
-      </li>
-    </ul>
-
+      {% include 'header.html' %}
   
     <!-- cart -->
     <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -104,5 +75,7 @@
         <video id="video2" src="{%static 'images/yogavideo.mp4' %}" height="700px" width="800px" controls autoplay></video>
 
       </section>
+
+      {% include 'footer.html' %}
 </body>
 </html>
