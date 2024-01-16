@@ -16,8 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from app1.views import delete_data,update_data,home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('app1.urls')),
+    path('delete/<int:id>/',view=delete_data,name='deletedata'),
+    path('update/<int:id>/',view=update_data,name='updatedata'),
+    path('',view=home,name='home')
+
 ]

@@ -50,3 +50,15 @@ def delete_data(request,id):
         pi.delete()
         return HttpResponseRedirect('/') #delete from home
 
+
+#udpate or edit
+def update_data(request,id):
+    if request.method=='POST':
+        pi=Admission.objects.get(pk=id)
+        fm=AdmissionForm(request.POST,instance=pi)
+        if fm.is_valid():
+            fm.save()
+    else:
+        pi=Admission.objects.get(pk=id)
+        fm=AdmissionForm(instance=pi)
+    return render(request=request,template_name='update.html',context={'form':fm})
