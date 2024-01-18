@@ -23,6 +23,6 @@ urlpatterns = [
     path('',include('app1.urls')),
     path('delete/<int:id>/',view=delete_data,name='deletedata'),
     path('update/<int:id>/',view=update_data,name='updatedata'),
-    path('',view=home,name='home')
+    path('',view=home,name='home'),
 
 ]
