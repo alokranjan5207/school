@@ -8,6 +8,6 @@ class Student(models.Model):
     Adhar_No=models.IntegerField(max_length=50)
     Contact_No=models.IntegerField(max_length=50)
     Address=models.CharField(max_length=50)
-    Salary=models.IntegerField(max_length=50)
-    Subject=models.CharField(max_length=30)
+    Salary=models.IntegerField(max_length=50,default=10000)
+    Subject=models.CharField(max_length=30,default='maths')
 

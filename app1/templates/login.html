@@ -23,6 +23,16 @@
     {% include 'header.html' %}
 
     <h1>Login Page</h1>
+    <img src="{% static 'images/loginbg.jpeg' %}" alt="">
+    <div class="p-5 bg-white mt-5">
+      <form action="" method="POST">
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type="submit" class="btn btn-success " class="mx-auto" style="width: 70px;" value="submit">
+  
+      </form>
+  
+    </div>
     {% include 'footer.html' %}
   </body>
 </html>

@@ -1,6 +1,6 @@
 from django.shortcuts import render,HttpResponseRedirect
 from .models import Student
-from .forms import StudentForm,TeacherForm
+from .forms import StudentForm,TeacherForm,LoginForm
 from django.core import validators
 
 # Create your views here.
@@ -22,8 +22,9 @@ def contact(request):
 def admission(request):
     return render(request=request,template_name='admission.html')
 
-def login(request):
-    return render(request=request,template_name='login.html')
+# def login(request):
+#     return render(request=request,template_name='login.html')
+
 # add data using form
 def formdata(request):
     if request.method=='POST':
@@ -87,3 +88,13 @@ def teacher(request):
     else:
         fm=TeacherForm()
     return render(request=request,template_name='teacher.html',context={'form':fm})
+
+#login
+def login(request):
+    if request.method=='POST':
+        fm=LoginForm(request.POST)
+        if fm.is_valid():
+            fm.save()
+    else:
+        fm=LoginForm()
+    return render(request=request,template_name='login.html',context={'form':fm})

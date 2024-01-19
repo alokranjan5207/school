@@ -19,3 +19,7 @@ class StudentForm(forms.ModelForm):
 class TeacherForm(StudentForm):
     class Meta(StudentForm.Meta):
         fields=['Teacher_Name','Subject','Adhar_No','Contact_No','Address','Salary']
+
+class LoginForm(TeacherForm):
+    class Meta(TeacherForm.Meta):
+        fields=['Contact_No',]
