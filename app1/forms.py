@@ -1,19 +1,21 @@
+from .models import Student
+from django.forms import ModelForm
+# from django.core import validators
 from django import forms
-from .models import Admission
-from django.core import validators
 
-class AdmissionForm(forms.ModelForm):
+class StudentForm(forms.ModelForm):
     class Meta:
-        model=Admission
+        model=Student
+        # fields=['Student_Name','Mother_Name','Adhar_No','Contact_No','Address']
+        # widgets={
+        #     'Student_Name':forms.TextInput(attrs={'class':'form-control'}),
+        #     'Mother_Name':forms.TextInput(attrs={'class':'form-control'}),
+        #     'Adhar_No':forms.TextInput(attrs={'class':'form-control'}),
+        #     'Contact_No':forms.TextInput(attrs={'class':'form-control'}),
+        #     'Address':forms.TextInput(attrs={'class':'form-control'})
+        # }
         fields=['Student_Name','Mother_Name','Adhar_No','Contact_No','Address']
-        widgets={
-            'Student_Name':forms.TextInput(attrs={'class':'form-control'}),
-            'Mother_Name':forms.TextInput(attrs={'class':'form-control'}),
-            'Adhar_No':forms.TextInput(attrs={'class':'form-control'}),
-            'Contact_No':forms.TextInput(attrs={'class':'form-control'}),
-            'Address':forms.TextInput(attrs={'class':'form-control'}),
 
-
-
-
-        }
+class TeacherForm(StudentForm):
+    class Meta(StudentForm.Meta):
+        fields=['Teacher_Name','Subject','Adhar_No','Contact_No','Address','Salary']

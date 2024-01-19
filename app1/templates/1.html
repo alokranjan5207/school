@@ -38,11 +38,15 @@
         <tr>
           <th scope="col">ID</th>
           <th scope="col">Student's Name</th>
+          <th scope="col">Teacher's Name</th>
+          <th scope="col">Subject Name</th>
           <th scope="col">Mother's Name</th>
           <th scope="col">Class</th>
           <th scope="col">Contact</th>
           <th scope="col">Address</th>
           <th scope="col">Adhar No.</th>
+          <th scope="col">Sarary</th>
+
         </tr>
       </thead>
       <tbody>
@@ -50,11 +54,14 @@
         <tr>
           <th scope="row">{{st.id}}</th>
           <td>{{st.Student_Name}}</td>
+          <td>{{st.Teacher_Name}}</td>
+          <td>{{st.Subject}}</td>
           <td>{{st.Mother_Name}}</td>
           <td>{{st.Adhar_No}}</td>
           <td>{{st.Contact_No}}</td>
-          <td>{{st.Contact_No}}</td>
+          <td>{{st.Salary}}</td>
           <td>{{st.Address}}</td>
+          <!-- <td>{{st.Stu}}</td> -->
           <td>
             <a href="{% url 'updatedata' st.id %}" class="btn btn-warning btn-sm">Edit</a>
             <form action="{% url 'deletedata' st.id %}" method="POST" class="d-inline">
