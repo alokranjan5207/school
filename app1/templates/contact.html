@@ -19,19 +19,125 @@
       crossorigin="anonymous"
     ></script> 
     <style>
-      a:hover{
-    background-color: red;
-    border-radius: 15px;
-    
-}
-    </style>
+
+</style>
 </head>
 <body>
   {% include 'header.html' %}
   
 
-          <!-- <img class="photo" src="{% static 'images/classroom1.jpeg' %}" alt=""> -->
+          <img class="photo" src="{% static 'images/classroom1.jpeg' %}" alt="">
 
-    {% include 'footer.html' %}
-</body>
+    <footer id="foot" class="text-center text-lg-start bg-body-tertiary mt-0 text-muted">
+        <!-- Section: Social media -->
+        <section
+          class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+          <!-- Left -->
+          <div class="me-5 d-none d-lg-block">
+          </div>
+          <!-- Left -->
+
+          <!-- Right -->
+          <div>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              class="me-4 text-reset"
+            >
+              <i class="fab fa-facebook-f"
+                ><img
+                  src="{% static 'images/instalogo.png' %}"
+                  alt=""
+                  height="40px"
+              /></i>
+            </a>
+            <a href="https://www.facebook.com/" class="me-4 text-reset">
+              <i class="fab fa-twitter"><img  src="{% static 'images/fblogo.png' %}" alt="" height="40px"/></i>
+            </a>
+            <a href="https://www.linkedin.com/feed/" class="me-4 text-reset">
+              <i class="fab fa-google"><img  src="{% static 'images/linkdinlogo.png' %}" alt="" height="40px"/></i>
+            </a>
+            <a href="https://www.youtube.com/" class="me-4 text-reset">
+              <i class="fab fa-instagram"><img  src="{% static 'images/youtubelogo.png' %}" alt="" height="40px"/></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+          <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <!-- Content -->
+                <h6 class="text-uppercase fs-3 fw-bold mb-4">
+                  <i class="fas fa-gem   me-3"></i>XYZ School
+                </h6>
+                <p class="fs-3" >
+                  Here you can use rows and columns to organize your footer
+                  content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit.
+                </p>
+              </div>
+             
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fs-3 fw-bold mb-4">Useful links</h6>
+                <p class="useful-link">
+                  <a class="fs-3" href="{% url 'app1:home' %}" class="text-reset">Home</a>
+                </p>
+                <p>
+                  <a class="fs-3"  href="{% url 'app1:admission' %}" class="text-reset">Admission</a>
+                </p>
+                <p>
+                  <a class="fs-3"  href="{% url 'app1:about' %}" class="text-reset">About</a>
+                </p>
+                <p>
+                  <a class="fs-3"  href="{% url 'app1:contact' %}" class="text-reset">Contact</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fs-3  fw-bold mb-4">Contact</h6>
+                <p class="fs-3"><i class="fas fa-home me-3"></i> XYZ School, Patna</p>
+                <p class="fs-3">
+                  <i class="fas  fa-envelope me-3"></i><a id="mail-link" href="">xyzinfo@example.com</a>
+                </p>
+                <p class="fs-3"><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                <p class="fs-3"><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+              </div>
+              
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+          </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div
+          class="text-center p-4"
+          style="background-color: rgba(101, 10, 10, 0.05)"
+        >
+          © 2021 Copyright:
+          <a class="text-reset fw-bold" href="https://xyx.com/"
+            >xyz.com</a
+          >
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+  </body>
 </html>
