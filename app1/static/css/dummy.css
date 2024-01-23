@@ -1,0 +1,11 @@
+h1{
+    background-color: red;
+}
+.eng,.hind,.math{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+/* .hind{
+    margin-left: 10%;
+    margin-right: 10%;
+} */

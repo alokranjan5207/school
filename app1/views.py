@@ -98,3 +98,19 @@ def login(request):
     else:
         fm=LoginForm()
     return render(request=request,template_name='login.html',context={'form':fm})
+
+#class Dropdown
+def cls1(request):
+    return render(request=request,template_name='cls1.html')
+
+def cls2(request):
+    return render(request=request,template_name='cls2.html')
+
+def cls3(request):
+    return render(request=request,template_name='cls3.html')
+
+def cls4(request):
+    return render(request=request,template_name='cls4.html')
+
+def cls5(request):
+    return render(request=request,template_name='cls5.html')

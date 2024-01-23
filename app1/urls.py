@@ -13,5 +13,12 @@ urlpatterns = [
     path('teacher/',view=views.teacher,name='teacher'),
     path('student/',view=views.student,name='student'),
     path('login/',view=views.login,name='login'),
+    #syllabus dropwown
+    path('cls1/',view=views.cls1,name='cls1'),
+    path('cls2/',view=views.cls2,name='cls2'),
+    path('cls3/',view=views.cls3,name='cls3'),
+    path('cls4/',view=views.cls4,name='cls4'),
+    path('cls5/',view=views.cls5,name='cls5'),
+
 
 ]
