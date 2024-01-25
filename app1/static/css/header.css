@@ -2,3 +2,17 @@ ul>li>a:hover{
     background-color: white;
     border-radius: 5px;
 }
+
+.subnav{
+    visibility: hidden;
+    z-index: 1;
+}
+
+li:hover ul.subnav{
+        opacity: 1;
+        visibility: visible;
+}
+.subnav>a:hover{
+    opacity: 1;
+    visibility: visible;
+}
