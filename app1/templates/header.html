@@ -41,7 +41,16 @@
         <a class="nav-link" href="{% url 'app1:event' %}">EVENTS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'app1:login' %}">LOGIN</a>
+        <div class="dropdown">
+          <a class="btn btn-primary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Login
+          </a>
+          
+          <ul class="dropdown-menu text-dark">
+            <li><a class="dropdown-item " href="#">Student</a></li>
+            <li><a class="dropdown-item" href="#">Teacher</a></li>
+          </ul>
+        </div>
       </li>
       
        
@@ -51,6 +60,10 @@
 
       <li class="nav-item">
         <a class="nav-link" href="{% url 'app1:contact' %}">CONTACT US</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'app1:contact' %}">Rate US</a>
       </li>
     </ul>
   </body>
