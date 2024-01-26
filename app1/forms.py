@@ -9,12 +9,26 @@ class StudentForm(forms.ModelForm):
         fields=['Student_Name','Mother_Name','Adhar_No','Contact_No','Address']
         widgets={
             'Student_Name':forms.TextInput(attrs={'class':'form-control'}),
+            'Teacher_Name':forms.TextInput(attrs={'class':'form-control'}),
+            'Subject':forms.TextInput(attrs={'class':'form-control'}),
+
             'Mother_Name':forms.TextInput(attrs={'class':'form-control'}),
+            # 'Class':forms.Textarea(attrs={'class':'form-control'}),
             'Adhar_No':forms.TextInput(attrs={'class':'form-control'}),
             'Contact_No':forms.TextInput(attrs={'class':'form-control'}),
-            'Address':forms.TextInput(attrs={'class':'form-control'})
+            'Address':forms.TextInput(attrs={'class':'form-control'}),
+            'Salary':forms.TextInput(attrs={'class':'form-control'}),
+
+            
         }
-        fields=['Student_Name','Mother_Name','Adhar_No','Contact_No','Address']
+        fields=['Student_Name','Teacher_Name','Mother_Name','Adhar_No','Contact_No','Address','Salary']
+
+# class TeacherForm(forms.ModelForm):
+#     class Meta:
+#         model=Teacher
+#         fields=['Teacher_Name','Subject','Salary','Address','Contact_No','Adhar_No']
+
+
 
 class TeacherForm(StudentForm):
     class Meta(StudentForm.Meta):
