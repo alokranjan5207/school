@@ -16,6 +16,9 @@ def about(request):
 def event(request):
     return render(request=request,template_name='event.html')
 
+def login(request):
+    return render(request=request,template_name='login.html')
+
 def contact(request):
     return render(request=request,template_name='contact.html')
 
@@ -90,14 +93,14 @@ def teacher(request):
     return render(request=request,template_name='teacher.html',context={'form':fm})
 
 #login
-def login(request):
-    if request.method=='POST':
-        fm=LoginForm(request.POST)
-        if fm.is_valid():
-            fm.save()
-    else:
-        fm=LoginForm()
-    return render(request=request,template_name='login.html',context={'form':fm})
+# def login(request):
+#     if request.method=='POST':
+#         fm=LoginForm(request.POST)
+#         if fm.is_valid():
+#             fm.save()
+#     else:
+#         fm=LoginForm()
+#     return render(request=request,template_name='login.html',context={'form':fm})
 
 #class Dropdown
 def cls1(request):

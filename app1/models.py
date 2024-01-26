@@ -11,3 +11,4 @@ class Student(models.Model):
     Salary=models.IntegerField(max_length=50,default=10000)
     Subject=models.CharField(max_length=30,default='maths')
 
+

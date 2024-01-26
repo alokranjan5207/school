@@ -6,14 +6,14 @@ from django import forms
 class StudentForm(forms.ModelForm):
     class Meta:
         model=Student
-        # fields=['Student_Name','Mother_Name','Adhar_No','Contact_No','Address']
-        # widgets={
-        #     'Student_Name':forms.TextInput(attrs={'class':'form-control'}),
-        #     'Mother_Name':forms.TextInput(attrs={'class':'form-control'}),
-        #     'Adhar_No':forms.TextInput(attrs={'class':'form-control'}),
-        #     'Contact_No':forms.TextInput(attrs={'class':'form-control'}),
-        #     'Address':forms.TextInput(attrs={'class':'form-control'})
-        # }
+        fields=['Student_Name','Mother_Name','Adhar_No','Contact_No','Address']
+        widgets={
+            'Student_Name':forms.TextInput(attrs={'class':'form-control'}),
+            'Mother_Name':forms.TextInput(attrs={'class':'form-control'}),
+            'Adhar_No':forms.TextInput(attrs={'class':'form-control'}),
+            'Contact_No':forms.TextInput(attrs={'class':'form-control'}),
+            'Address':forms.TextInput(attrs={'class':'form-control'})
+        }
         fields=['Student_Name','Mother_Name','Adhar_No','Contact_No','Address']
 
 class TeacherForm(StudentForm):
