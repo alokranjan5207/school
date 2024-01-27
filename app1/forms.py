@@ -27,7 +27,7 @@ class TeacherForm(forms.ModelForm):
     class Meta:
         model=Teacher
         # fields=['Teacher_Name','Subject','Salary','Address','Contact_No','Adhar_No']
-        fields=['Teacher','Subject','Contact']
+        fields=['Teacher_Name','Subject','Contact']
 
 
 

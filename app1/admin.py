@@ -10,4 +10,4 @@ class StudentAdmin(admin.ModelAdmin):
 @admin.register(Teacher)
 class TeacherAdmin(admin.ModelAdmin):
     # list_display=['Teacher_Name','Subject','Salary','Address','Contact_NO','Adhar_No']
-    list_display=['Teacher','Subject','Contact']
+    list_display=['Teacher_Name','Subject','Contact']

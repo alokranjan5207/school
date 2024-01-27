@@ -16,7 +16,7 @@ def __str__(self):
     return self.name
 
 class Teacher(models.Model):
-    Teacher=models.CharField(max_length=40)
+    Teacher_Name=models.CharField(max_length=40)
     Subject=models.CharField(max_length=30)
     Contact=models.IntegerField(max_length=10)
     
