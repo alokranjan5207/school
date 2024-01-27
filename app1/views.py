@@ -1,5 +1,5 @@
 from django.shortcuts import render,HttpResponseRedirect
-from .models import Student
+from .models import Student,Teacher
 from .forms import StudentForm,TeacherForm,LoginForm
 from django.core import validators
 
@@ -70,6 +70,48 @@ def update_data(request,id):
     return render(request=request,template_name='update.html',context={'form':fm})
 
 
+
+
+#Teacher model
+def teacherdata(request):
+    if request.method=='POST':
+        fm=TeacherForm(request.POST)
+        if fm.is_valid():
+            fm.save() #sort way to save
+        
+            return render(request=request,template_name="sucessfuladmsn.html")
+        fm=TeacherForm()
+    else:
+        fm=TeacherForm()
+    stud=Teacher.objects.all()    # show all formdata
+    return render(request=request,template_name='2.html',context={'form':fm,'stu':stud})
+
+    # delete data
+def delete_data(request,id):
+    if request.method=='POST':
+        pi=Teacher.objects.get(pk=id)
+        pi.delete()
+        return HttpResponseRedirect('/') #delete from home
+
+
+#udpate or edit
+def update_data(request,id):
+    if request.method=='POST':
+        pi=Teacher.objects.get(pk=id)
+        fm=TeacherForm(request.POST,instance=pi)
+        if fm.is_valid():
+            fm.save()
+    else:
+        pi=Teacher.objects.get(pk=id)
+        fm=TeacherForm(instance=pi)
+    return render(request=request,template_name='update.html',context={'form':fm})
+
+
+
+
+
+
+   #form details
 #Student details
 def student(request):
     if request.method=='POST':

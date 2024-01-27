@@ -1,4 +1,4 @@
-from .models import Student
+from .models import Student,Teacher
 from django.forms import ModelForm
 # from django.core import validators
 from django import forms
@@ -9,8 +9,8 @@ class StudentForm(forms.ModelForm):
         fields=['Student_Name','Mother_Name','Adhar_No','Contact_No','Address']
         widgets={
             'Student_Name':forms.TextInput(attrs={'class':'form-control'}),
-            'Teacher_Name':forms.TextInput(attrs={'class':'form-control'}),
-            'Subject':forms.TextInput(attrs={'class':'form-control'}),
+            # 'Teacher_Name':forms.TextInput(attrs={'class':'form-control'}),
+            # 'Subject':forms.TextInput(attrs={'class':'form-control'}),
 
             'Mother_Name':forms.TextInput(attrs={'class':'form-control'}),
             # 'Class':forms.Textarea(attrs={'class':'form-control'}),
@@ -21,12 +21,13 @@ class StudentForm(forms.ModelForm):
 
             
         }
-        fields=['Student_Name','Teacher_Name','Mother_Name','Adhar_No','Contact_No','Address','Salary']
+        fields=['Student_Name','Mother_Name','Adhar_No','Contact_No','Address','Salary']
 
-# class TeacherForm(forms.ModelForm):
-#     class Meta:
-#         model=Teacher
-#         fields=['Teacher_Name','Subject','Salary','Address','Contact_No','Adhar_No']
+class TeacherForm(forms.ModelForm):
+    class Meta:
+        model=Teacher
+        # fields=['Teacher_Name','Subject','Salary','Address','Contact_No','Adhar_No']
+        fields=['Teacher','Subject','Contact']
 
 
 

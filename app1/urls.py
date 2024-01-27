@@ -9,6 +9,8 @@ urlpatterns = [
     path('contact/',view=views.contact,name='contact'),
     path('admission/',view=views.admission,name='admission'),
     path('formdata/',view=views.formdata,name='formdata'),
+    path('teacherdata/',view=views.teacherdata,name='teacherdata'),
+
     # path('delete/<int:id>/',view=views.delete_data,name='deletedata'),
     path('teacher/',view=views.teacher,name='teacher'),
     path('student/',view=views.student,name='student'),

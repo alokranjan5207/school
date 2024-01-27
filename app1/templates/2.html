@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load static %} 
+{% load bootstrap5 %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/1.css' %}" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+    <h1>Added Teacher Data</h1>
+    <div>
+      <form class="col-sm-5 center-block" action="" method="POST">
+          {% csrf_token %}
+          {{form.as_p}}
+          <input type="submit" class="btn btn-success" value="submit">
+      </form>
+    </div>
+
+  <!-- show data on teacher page -->
+  <div class="col-sm-8">
+    <h4 class="text-center alert-info">Show Teacher Information</h4>
+    {% if stu %}
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Teacher's Name</th>
+          <th scope="col">Subject Name</th>
+          <th scope="col">Contact</th>
+
+          {% comment %} <th scope="col">Class</th>
+          <th scope="col">Address</th>
+          <th scope="col">Adhar No.</th>
+          <th scope="col">Sarary</th> {% endcomment %}
+
+        </tr>
+      </thead>
+      <tbody>
+        {% for st in stu %}
+        <tr>
+          <th scope="row">{{st.id}}</th>
+          <td>{{st.Teacher_Name}}</td>
+          <td>{{st.Subject}}</td>
+          <td>{{st.Contact_No}}</td>
+
+          {% comment %} <td>{{st.Mother_Name}}</td>
+          <td>{{st.Adhar_No}}</td>
+          <td>{{st.Salary}}</td>
+          <td>{{st.Address}}</td> {% endcomment %}
+          <!-- <td>{{st.Stu}}</td> -->
+          <td>
+            <a href="{% url 'teacherdata' st.id %}" class="btn btn-warning btn-sm">Edit</a>
+            <form action="{% url 'deletedata' st.id %}" method="POST" class="d-inline">
+              {% csrf_token %}
+              <input type="submit" class="btn btn-danger" value="Delete">
+
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    {% endif %}
+
+  </div>
+</body>
+</html>
