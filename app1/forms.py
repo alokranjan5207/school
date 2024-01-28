@@ -6,28 +6,28 @@ from django import forms
 class StudentForm(forms.ModelForm):
     class Meta:
         model=Student
-        fields=['Student_Name','Mother_Name','Adhar_No','Contact_No','Address']
+        fields=['Student_Name','Mother_Name','Classs','Adhar_No','Contact_No','Address']
         widgets={
             'Student_Name':forms.TextInput(attrs={'class':'form-control'}),
-            # 'Teacher_Name':forms.TextInput(attrs={'class':'form-control'}),
-            # 'Subject':forms.TextInput(attrs={'class':'form-control'}),
+            'Teacher_Name':forms.TextInput(attrs={'class':'form-control'}),
+            'Subject':forms.TextInput(attrs={'class':'form-control'}),
 
             'Mother_Name':forms.TextInput(attrs={'class':'form-control'}),
-            # 'Class':forms.Textarea(attrs={'class':'form-control'}),
-            'Adhar_No':forms.TextInput(attrs={'class':'form-control'}),
-            'Contact_No':forms.TextInput(attrs={'class':'form-control'}),
+            'Class':forms.NumberInput(attrs={'class':'form-control'}),
+            'Adhar_No':forms.NumberInput(attrs={'class':'form-control'}),
+            'Contact_No':forms.NumberInput(attrs={'class':'form-control'}),
             'Address':forms.TextInput(attrs={'class':'form-control'}),
-            'Salary':forms.TextInput(attrs={'class':'form-control'}),
+            'Salary':forms.NumberInput(attrs={'class':'form-control'}),
 
             
         }
-        fields=['Student_Name','Mother_Name','Adhar_No','Contact_No','Address','Salary']
+        fields=['Student_Name','Classs','Mother_Name','Adhar_No','Contact_No','Address','Salary']
 
 class TeacherForm(forms.ModelForm):
     class Meta:
         model=Teacher
         # fields=['Teacher_Name','Subject','Salary','Address','Contact_No','Adhar_No']
-        fields=['Teacher_Name','Subject','Contact']
+        fields=['Teacher_Name','Subject','Contact_No','Salary']
 
 
 
