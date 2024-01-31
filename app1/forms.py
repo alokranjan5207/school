@@ -1,4 +1,4 @@
-from .models import Student
+from .models import Student,Teacher
 from django.forms import ModelForm
 # from django.core import validators
 from django import forms
@@ -18,7 +18,9 @@ class StudentForm(forms.ModelForm):
 
 class TeacherForm(StudentForm):
     class Meta(StudentForm.Meta):
-        fields=['Teacher_Name','Subject','Adhar_No','Contact_No','Address','Salary']
+        # fields=['Teacher_Name','Subject','Adhar_No','Contact_No','Address','Salary']
+        fields=['Teacher_Name','Subject','Salary','Contact_No']
+
 
 class LoginForm(TeacherForm):
     class Meta(TeacherForm.Meta):
