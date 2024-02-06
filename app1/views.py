@@ -1,6 +1,6 @@
 from django.shortcuts import render,HttpResponseRedirect
 from .models import Student
-from .forms import StudentForm,TeacherForm,LoginForm
+from .forms import StudentForm
 from django.core import validators
 
 # Create your views here.
