@@ -4,9 +4,9 @@ from app1.models import Student
 
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
-    list_display=['Student_Name','Teacher_Name','Mother_Name','Adhar_No','Contact_No','Subject','Address','Salary']
+    # list_display=['Student_Name','Teacher_Name','Mother_Name','Adhar_No','Contact_No','Subject','Address','Salary']
 
-    # list_display=['Student_Name','Mother_Name','Adhar_No','Contact_No','Address']
+    list_display=['Student_Name','Mother_Name','Adhar_No','Contact_No','Address']
 
 # @admin.register(Teacher)
 

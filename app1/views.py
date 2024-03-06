@@ -83,16 +83,16 @@ def student(request):
 
 
 #teacher details
-def teacher(request):
-    if request.method=='POST':
-        fm=TeacherForm(request.POST)
-        if fm.is_valid():
-            fm.save()
-    else:
-        fm=TeacherForm()
-    return render(request=request,template_name='teacher.html',context={'form':fm})
+# def teacher(request):
+#     if request.method=='POST':
+#         fm=TeacherForm(request.POST)
+#         if fm.is_valid():
+#             fm.save()
+#     else:
+#         fm=TeacherForm()
+#     return render(request=request,template_name='teacher.html',context={'form':fm})
 
-#login
+# #login
 # def login(request):
 #     if request.method=='POST':
 #         fm=LoginForm(request.POST)

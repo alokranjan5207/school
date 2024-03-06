@@ -9,10 +9,12 @@ urlpatterns = [
     path('contact/',view=views.contact,name='contact'),
     path('admission/',view=views.admission,name='admission'),
     path('formdata/',view=views.formdata,name='formdata'),
-    # path('delete/<int:id>/',view=views.delete_data,name='deletedata'),
-    path('teacher/',view=views.teacher,name='teacher'),
+    path('delete/<int:id>/',view=views.delete_data,name='deletedata'),
+    # path('teacher/',view=views.teacher,name='teacher'),
     path('student/',view=views.student,name='student'),
     path('login/',view=views.login,name='login'),
+
+
     #syllabus dropwown
     path('cls1/',view=views.cls1,name='cls1'),
     path('cls2/',view=views.cls2,name='cls2'),
